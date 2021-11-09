@@ -39,6 +39,33 @@ class SuperCar {
 
 }
 
+// 클래스(설명서) 만드는 방법(3) -> 1번 방법의 확장
+class Car1 (var engine: String, var body: String) {
+    var door : String = ""
+
+    // 생성자
+    constructor(engine: String, body: String, door: String) : this(engine, body) {
+        this.door = door
+    }
+}
+
+// 클래스(설명서) 만드는 방법(4) -> 2번 방법의 확장
+class Car2 {
+    var engine :String = ""
+    var body : String = ""
+    var door : String = ""
+
+    constructor(engine: String, body: String){
+        this.engine = engine
+        this.body = body
+    }
+    constructor(engine: String, body: String, door: String) {
+        this.engine = engine
+        this.body = body
+        this.door = door
+    }
+}
+
 fun main(Array:String) {
 
     // 설명서를 통해서 실체를 만드는 방법
