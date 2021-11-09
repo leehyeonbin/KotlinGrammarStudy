@@ -19,6 +19,37 @@ package com.example.kotlinsgrammar.grammar
 // - 설명서가 있어야 한다
 
 
+// 클래스(설명서) 만드는 방법(1)
+
+class Car(var engine : String, var body : String) {
+
+}
+
+// 클래스(설명서) 만드는 방법(2)
+class SuperCar {
+    var engine : String
+    var body : String
+    var door : String
+
+    constructor (engine: String, body: String, door : String) {
+        this.engine = engine
+        this.body = body
+        this.door = door
+    }
+
+}
+
 fun main(Array:String) {
+
+    // 설명서를 통해서 실체를 만드는 방법
+    // -> 인스턴스화 -> 인스턴스(객체)
+    Car("V8 engine","Big")
+    val bigCar = Car("V8 engine","Big")
+    val bigCar1 :Car = Car("V8 engine","Big")
+
+    var number : Int = 10
+    var number1 = 20
+
+    val superCar : SuperCar = SuperCar("good engine"," body","white")
 
 }
