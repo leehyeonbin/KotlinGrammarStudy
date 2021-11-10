@@ -106,6 +106,17 @@ class RunableCar2 {
     }
 }
 
+// 오버로딩
+class TestCalls() {
+
+    fun test(a : Int) {
+        println("up")
+    }
+    fun test(a : Int, b : Int) {
+        println("down")
+    }
+}
+
 fun main() {
 
     // 설명서를 통해서 실체를 만드는 방법
@@ -132,5 +143,10 @@ fun main() {
     println(runableCar2.engine)
     println(runableCar2.body)
 
+    val testCalls : TestCalls = TestCalls()
 
+    // 오버로딩
+    // -> 이름이 같지만 받는 파라미터가 다른 함수
+    testCalls.test(1)
+    testCalls.test(1,2)
 }
