@@ -66,7 +66,47 @@ class Car2 {
     }
 }
 
-fun main(Array:String) {
+class RunableCar (engine: String, body: String) {
+
+    fun ride() {
+        println("탑승")
+    }
+
+    fun drive() {
+        println("달립니다.")
+    }
+
+    fun navigation(destination : String) {
+        println("$destination 으로 목적지가 설정되었습니다.")
+    }
+}
+
+class RunableCar2 {
+    var engine : String
+    var body : String
+
+    // 객체 생성 시 가장 먼저 만들어지는 부분 (초기 세팅과 같은 부분에서 사용)
+    init {
+        println("RunableCar2 가 생성되었습니다.")
+    }
+    constructor(engine: String, body: String) {
+        this.engine = engine
+        this.body = body
+    }
+    fun ride() {
+        println("탑승")
+    }
+
+    fun drive() {
+        println("달립니다.")
+    }
+
+    fun navigation(destination : String) {
+        println("$destination 으로 목적지가 설정되었습니다.")
+    }
+}
+
+fun main() {
 
     // 설명서를 통해서 실체를 만드는 방법
     // -> 인스턴스화 -> 인스턴스(객체)
@@ -78,5 +118,19 @@ fun main(Array:String) {
     var number1 = 20
 
     val superCar : SuperCar = SuperCar("good engine"," body","white")
+
+    val runableCar : RunableCar = RunableCar("Simple engine", "small body")
+
+    // 인스턴스가 가지고 있는 기능을 사용하는 방법
+    runableCar.ride()
+    runableCar.navigation("부산")
+    runableCar.drive()
+
+    // 인스턴스의 멤버 변수에 접근하는 방법
+
+    val runableCar2 : RunableCar2 = RunableCar2("nice engine", "long body")
+    println(runableCar2.engine)
+    println(runableCar2.body)
+
 
 }
